@@ -3,7 +3,7 @@
     "title": "Users, who are you ?",
     "subtitle": "Thanks to tell me who you are, I am curious to know how my software are being used. :-D",
     "fields": {
-      "firstName": "First Name (or nickname)",
+      "firstName": "Name (or nickname)",
       "lastName": "City - Country",
       "email": "Email",
       "company": "Context, association, institution where you work",
@@ -40,10 +40,10 @@
     "title": "Utilisateurs, qui êtes-vous ?",
     "subtitle": "Je suis curieux de savoir comment sont utilisés mes logiciels :-D",
     "fields": {
-      "firstName": "NOM - Prénom (ou pseudo)",
+      "firstName": "Nom, prénom (ou pseudo)",
       "lastName": "Ville - Pays",
       "email": "Courriel",
-      "company": "Contexte, association, établissement exercé",
+      "company": "Contexte, association, établissement d'exercice",
       "software": "Logiciel utilisé",
       "message": "Merci de décrire l'usage, si vous voulez bien détailler"
     },
