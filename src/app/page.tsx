@@ -4,7 +4,7 @@ import { useState, FormEvent } from 'react'
 import { useLanguage } from './useLanguage'
 
 export default function Home() {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -16,13 +16,14 @@ export default function Home() {
     setSuccess(false)
 
     const formData = new FormData(e.currentTarget)
-      const data = {
+    const data = {
       firstName: formData.get('firstName') as string,
       lastName: formData.get('lastName') as string,
       email: formData.get('email') as string,
       company: formData.get('company') as string,
       software: formData.get('software') as string,
       message: formData.get('message') as string,
+      locale,
     }
 
     try {

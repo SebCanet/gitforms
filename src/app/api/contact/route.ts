@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { getTranslations, type Locale } from '@/app/translations'
 
 interface ContactFormData {
   firstName: string
@@ -7,16 +8,26 @@ interface ContactFormData {
   company?: string
   software?: string
   message: string
+  locale?: Locale
+}
+
+function getLocaleFromRequest(request: NextRequest, bodyLocale?: Locale): Locale {
+  if (bodyLocale === 'en' || bodyLocale === 'fr') return bodyLocale
+  const acceptLang = request.headers.get('accept-language')
+  if (acceptLang?.startsWith('fr')) return 'fr'
+  return 'en'
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body: ContactFormData = await request.json()
+    const locale = getLocaleFromRequest(request, body.locale)
+    const t = getTranslations(locale)
 
     // Validate required fields (company is optional)
     if (!body.firstName || !body.lastName || !body.email || !body.message) {
       return NextResponse.json(
-        { error: 'Tutti i campi obbligatori devono essere compilati' },
+        { error: t.api.errorRequired },
         { status: 400 }
       )
     }
@@ -25,7 +36,7 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(body.email)) {
       return NextResponse.json(
-        { error: 'Email non valida' },
+        { error: t.api.errorInvalidEmail },
         { status: 400 }
       )
     }
@@ -37,7 +48,7 @@ export async function POST(request: NextRequest) {
     if (!GITHUB_TOKEN || !GITHUB_REPO) {
       console.error('Missing GitHub configuration')
       return NextResponse.json(
-        { error: 'Errore di configurazione. Contatta l\'amministratore.' },
+        { error: t.api.errorConfig },
         { status: 500 }
       )
     }
@@ -46,7 +57,7 @@ export async function POST(request: NextRequest) {
     if (!owner || !repo) {
       console.error('Invalid GITHUB_REPO format')
       return NextResponse.json(
-        { error: 'Errore di configurazione. Contatta l\'amministratore.' },
+        { error: t.api.errorConfig },
         { status: 500 }
       )
     }
@@ -93,7 +104,7 @@ ${body.message}
         body: JSON.stringify({
           title: `📧 ${fullName}${body.company ? ' - ' + body.company : ''}`,
           body: contactData,
-          labels: ['contatto'],
+          labels: ['contact'],
         }),
       }
     )
@@ -101,7 +112,7 @@ ${body.message}
     if (!response.ok) {
       console.error('Failed to save contact')
       return NextResponse.json(
-        { error: 'Errore durante il salvataggio. Riprova.' },
+        { error: t.api.errorSave },
         { status: 500 }
       )
     }
@@ -110,14 +121,16 @@ ${body.message}
     return NextResponse.json(
       {
         success: true,
-        message: 'Grazie! Ti contatteremo a breve.',
+        message: t.api.successMessage,
       },
       { status: 201 }
     )
   } catch (error) {
     console.error('Error:', error)
+    const locale = getLocaleFromRequest(request, undefined)
+    const t = getTranslations(locale)
     return NextResponse.json(
-      { error: 'Errore imprevisto. Riprova più tardi.' },
+      { error: t.api.errorUnexpected },
       { status: 500 }
     )
   }
