@@ -11,11 +11,12 @@ export default function Home() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    const form = e.currentTarget
     setLoading(true)
     setError(null)
     setSuccess(false)
 
-    const formData = new FormData(e.currentTarget)
+    const formData = new FormData(form)
     const data = {
       firstName: formData.get('firstName') as string,
       lastName: formData.get('lastName') as string,
@@ -42,7 +43,7 @@ export default function Home() {
       }
 
       setSuccess(true)
-      e.currentTarget.reset()
+      form.reset()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred')
     } finally {
@@ -139,14 +140,20 @@ export default function Home() {
             <label htmlFor="software" className="block text-sm font-medium text-text-label mb-1">
               {t.fields.software} {t.required}
             </label>
-            <input
-              type="text"
+            <select
               id="software"
               name="software"
               required
-              placeholder={t.placeholders.software}
-              className="w-full px-4 py-2 border border-border rounded-input focus:ring-2 focus:ring-primary-ring focus:border-transparent text-text-primary"
-            />
+              className="w-full px-4 py-2 border border-border rounded-input focus:ring-2 focus:ring-primary-ring focus:border-transparent text-text-primary bg-background-main"
+            >
+              <option value="">—</option>
+              <option value="µBlockly">µBlockly</option>
+              <option value="Blockly@rduino">Blockly@rduino</option>
+              <option value="Fritzing + Blockly">Fritzing + Blockly</option>
+              <option value="Studio4Education">Studio4Education</option>
+              <option value="TinkercadQHL">TinkercadQHL</option>
+              <option value="WokwiQHL">WokwiQHL</option>
+            </select>
           </div>
 
           <div>

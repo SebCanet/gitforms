@@ -87,8 +87,6 @@ export async function POST(request: NextRequest) {
 
 ${body.message}
 
----
-*Ricevuto dalla landing page*
 `
 
     const response = await fetch(
