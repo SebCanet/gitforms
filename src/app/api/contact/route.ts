@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     // Prepare contact data
     const fullName = `${body.firstName} ${body.lastName}`
     const timestamp = new Date()
-    const dateStr = timestamp.toLocaleDateString('it-IT', { 
+    const dateStr = timestamp.toLocaleDateString('fr-FR', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric',
