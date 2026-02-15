@@ -1,20 +1,20 @@
 {
   "en": {
-    "title": "Contact Us",
-    "subtitle": "Fill out the form and we'll get back to you soon.",
+    "title": "Users, who are you ?",
+    "subtitle": "Thanks to tell me who you are, I'm curious about use of my software :-D",
     "fields": {
-      "firstName": "First Name",
-      "lastName": "Last Name",
+      "firstName": "First Name (or nickname, it doesn't matter)",
+      "lastName": "City - Country",
       "email": "Email",
-      "company": "Company",
-      "message": "Message"
+      "company": "Context, association, institution where you work",
+      "message": "Please describe the use, what software if you want to detail (mention the name of the software if you want)"
     },
     "placeholders": {
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.com",
-      "company": "Your company",
-      "message": "How can we help you?"
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "company": "",
+      "message": ""
     },
     "buttons": {
       "submit": "Send Message",
@@ -23,6 +23,33 @@
     "messages": {
       "success": "Thank you! We'll contact you soon.",
       "error": "Error"
+    },
+    "required": "*"
+  },
+  "fr": {
+    "title": "Utilisateurs, qui êtes-vous ?",
+    "subtitle": "Merci de me dire brièvement qui vous êtes pour satisfaire ma curiosité :-D",
+    "fields": {
+      "firstName": "NOM - Prénom (ou pseudo, peu importe)",
+      "lastName": "Ville - Pays",
+      "email": "Courriel",
+      "company": "Contexte, association, établissement exercé",
+      "message": "Merci de décrire l'usage,q uel logiciel si vous voulez bien détailler"
+    },
+    "placeholders": {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "company": "",
+      "message": ""
+    },
+    "buttons": {
+      "submit": "Envoi du message",
+      "submitting": "Envoi en cours..."
+    },
+    "messages": {
+      "success": "Merci beaucoup de vos tests !",
+      "error": "Erreur"
     },
     "required": "*"
   }

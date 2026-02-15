@@ -1,6 +1,6 @@
 import translationsData from '../../config/translations.json'
 
-export type Locale = 'it' | 'en'
+export type Locale = 'fr' | 'en'
 
 type Translations = typeof translationsData
 
