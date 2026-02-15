@@ -7,13 +7,15 @@
       "lastName": "City - Country",
       "email": "Email",
       "company": "Context, association, institution where you work",
-      "message": "Please describe the use, what software, detail if you please"
+      "software": "Software you use",
+      "message": "Please describe the use, detail if you please"
     },
     "placeholders": {
       "firstName": "",
       "lastName": "",
       "email": "",
       "company": "",
+      "software": "",
       "message": ""
     },
     "buttons": {
@@ -34,13 +36,15 @@
       "lastName": "Ville - Pays",
       "email": "Courriel",
       "company": "Contexte, association, établissement exercé",
-      "message": "Merci de décrire l'usage, quel logiciel, si vous voulez bien détailler"
+      "software": "Logiciel utilisé",
+      "message": "Merci de décrire l'usage, si vous voulez bien détailler"
     },
     "placeholders": {
       "firstName": "",
       "lastName": "",
       "email": "",
       "company": "",
+      "software": "",
       "message": ""
     },
     "buttons": {

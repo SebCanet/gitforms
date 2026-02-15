@@ -5,6 +5,7 @@ interface ContactFormData {
   lastName: string
   email: string
   company?: string
+  software?: string
   message: string
 }
 
@@ -62,15 +63,16 @@ export async function POST(request: NextRequest) {
     })
 
     // Save to GitHub (free database storage)
-    const contactData = `# Nuovo Contatto
+    const contactData = `# Nouveau contact
 
-**Nome:** ${body.firstName}  
-**Cognome:** ${body.lastName}  
-**Email:** ${body.email}  
-**Azienda:** ${body.company || 'Non fornita'}  
-**Data:** ${dateStr}
+**Nom (ou pseudo):** ${body.firstName}  
+**Ville - Pays :** ${body.lastName}  
+**Courriel :** ${body.email}  
+**Contexte, association, établissement exercé :** ${body.company || 'Non fornita'}  
+**Logiciel utilisé :** ${body.software || 'Non fornito'}  
+**Date :** ${dateStr}
 
-## Messaggio
+## Message
 
 ${body.message}
 

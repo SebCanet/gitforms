@@ -16,11 +16,12 @@ export default function Home() {
     setSuccess(false)
 
     const formData = new FormData(e.currentTarget)
-    const data = {
+      const data = {
       firstName: formData.get('firstName') as string,
       lastName: formData.get('lastName') as string,
       email: formData.get('email') as string,
       company: formData.get('company') as string,
+      software: formData.get('software') as string,
       message: formData.get('message') as string,
     }
 
@@ -129,6 +130,20 @@ export default function Home() {
               name="company"
               required
               placeholder={t.placeholders.company}
+              className="w-full px-4 py-2 border border-border rounded-input focus:ring-2 focus:ring-primary-ring focus:border-transparent text-text-primary"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="software" className="block text-sm font-medium text-text-label mb-1">
+              {t.fields.software} {t.required}
+            </label>
+            <input
+              type="text"
+              id="software"
+              name="software"
+              required
+              placeholder={t.placeholders.software}
               className="w-full px-4 py-2 border border-border rounded-input focus:ring-2 focus:ring-primary-ring focus:border-transparent text-text-primary"
             />
           </div>
