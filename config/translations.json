@@ -21,7 +21,7 @@
       "submitting": "Sending..."
     },
     "messages": {
-      "success": "Thank you! We'll contact you soon.",
+      "success": "Thank you for your tests!",
       "error": "Error"
     },
     "required": "*"
@@ -34,7 +34,7 @@
       "lastName": "Ville - Pays",
       "email": "Courriel",
       "company": "Contexte, association, établissement exercé",
-      "message": "Merci de décrire l'usage,q uel logiciel si vous voulez bien détailler"
+      "message": "Merci de décrire l'usage, quel logiciel, si vous voulez bien détailler"
     },
     "placeholders": {
       "firstName": "",
