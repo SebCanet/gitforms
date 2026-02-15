@@ -40,7 +40,7 @@
     "title": "Utilisateurs, qui êtes-vous ?",
     "subtitle": "Je suis curieux de savoir comment sont utilisés mes logiciels :-D",
     "fields": {
-      "firstName": "Nom, prénom (ou pseudo)",
+      "firstName": "Nom (ou pseudo)",
       "lastName": "Ville - Pays",
       "email": "Courriel",
       "company": "Contexte, association, établissement d'exercice",
