@@ -1,31 +1,31 @@
 {
   "colors": {
     "primary": {
-      "DEFAULT": "#2563eb",
-      "hover": "#1d4ed8",
-      "ring": "#3b82f6"
+      "DEFAULT": "#1d4ed8",
+      "hover": "#1e40af",
+      "ring": "#2563eb"
     },
     "success": {
-      "bg": "#f0fdf4",
-      "border": "#bbf7d0",
-      "text": "#166534"
+      "bg": "#dcfce7",
+      "border": "#86efac",
+      "text": "#14532d"
     },
     "error": {
-      "bg": "#fef2f2",
-      "border": "#fecaca",
+      "bg": "#fee2e2",
+      "border": "#fca5a5",
       "text": "#991b1b"
     },
     "background": {
       "main": "#ffffff",
-      "page": "#f9fafb"
+      "page": "#f8fafc"
     },
     "text": {
-      "primary": "#111827",
-      "secondary": "#6b7280",
-      "label": "#374151"
+      "primary": "#0f172a",
+      "secondary": "#475569",
+      "label": "#1e293b"
     },
     "border": {
-      "DEFAULT": "#d1d5db"
+      "DEFAULT": "#94a3b8"
     }
   },
   "borderRadius": {
@@ -34,6 +34,6 @@
     "button": "0.5rem"
   },
   "shadows": {
-    "card": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+    "card": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"
   }
 }

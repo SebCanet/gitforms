@@ -1,25 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@theme {
+  /* Primary */
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-primary-ring: #2563eb;
+  /* Success */
+  --color-success-bg: #dcfce7;
+  --color-success-border: #86efac;
+  --color-success-text: #14532d;
+  /* Error */
+  --color-error-bg: #fee2e2;
+  --color-error-border: #fca5a5;
+  --color-error-text: #991b1b;
+  /* Background */
+  --color-background-main: #ffffff;
+  --color-background-page: #f8fafc;
+  /* Text */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-label: #1e293b;
+  /* Border */
+  --color-border: #94a3b8;
+  /* Radius */
+  --radius-card: 0.5rem;
+  --radius-input: 0.5rem;
+  --radius-button: 0.5rem;
+  /* Shadow */
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
 }

@@ -7,7 +7,7 @@
       "lastName": "City - Country",
       "email": "Email",
       "company": "Context, association, institution where you work",
-      "message": "Please describe the use, what software if you want to detail (mention the name of the software if you want)"
+      "message": "Please describe the use, what software, detail if you please"
     },
     "placeholders": {
       "firstName": "",
